@@ -15,11 +15,11 @@ Step 1: Create a sign up api and page ( `/signup` ) ( Signup user with following
 * Profile pic ( Required ) ( Store this on AWS S3 bucket )
 * Password ( Required ) ( Must have 8 characters with alpahnumeric and special characters )
 
-After successfully signup redirect user to homepage ( `/sigin` )
+After successfully signup redirect user to homepage ( `/signin` )
 
 Step 2: Confirmation api and page ( `/confirmation?email=abc@mail.com` ) 
 
-Step 3: Create a sign in api and page ( `/signin` ) ( Signin user with following details ) 
+Step 3: Create a sign in api and page ( `/signin` )
 
 * On sign in api and page user should be able to login with email and password.
 * Show error if email and password doesnt match.
@@ -29,7 +29,7 @@ Step 3: Create a sign in api and page ( `/signin` ) ( Signin user with following
 * Show a forgot password link in login form where user can reset his password.
 
 Step 4: Show available chat rooms on home page and create api for that ( `/` ).
-Also show a button to create his own public room.
+Also show a button to create a public room.
 
 Step 5: Create public chat room api and page ( `/create-room` ) ( With Following details )
 * Name
