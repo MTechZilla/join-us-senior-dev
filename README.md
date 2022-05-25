@@ -55,9 +55,9 @@ FrontEnd:
 * React, Vue and Angular are optional.
 
 Backend:
-* Language & Framework: C# & Dot Net.
-* Database: Postgres
-* CloudService: AWS
+* Language & Framework: C# & Dot Net Core.
+* Database: Any SQL Database.
+* CloudService: AWS/Azure/Gcp.
 
 ### Important Notes:
 
@@ -72,6 +72,6 @@ Backend:
 
 **Note: The goal of the task is majorly based on backend development and thus UI won't be an important factor while evaluation.**
 
-**The timeline to complete this app is a maximum of three days. Plagiarism is
+**The timeline to complete this app is a maximum of five days. Plagiarism is
 prohibited and if an applicant submits a plagiarised work then his application
 will be rejected.**
