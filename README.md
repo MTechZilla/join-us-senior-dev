@@ -1,6 +1,6 @@
 # Join Us
 
-This assignment is designed for the job post of the **Senior Software Developer**. ( Dot Net )
+This assignment is designed for the job post of Senior Software Developer. ( Dot Net )
 
 ## Assignment Info
 
@@ -34,7 +34,7 @@ createdAt: ( date, auto-added )
 updatedAt: ( date, auto-added and updated )
 ```
 
-**Note:** This is reference structure and feel free to improvise it more.
+**Note:** This is a reference structure. You can improvise it as per your requirement.
 
 ### APIs
 
@@ -165,7 +165,7 @@ updatedAt: ( date, auto-added and updated )
 
 
 ### Stack:
-To develop the application, use the below-given stack:
+Develop the application, use the below-given stack:
 
 * Language & Framework: C# & Dot Net Core.
 * Database: Any SQL Database.
@@ -175,17 +175,17 @@ To develop the application, use the below-given stack:
 1. Implementing API Rate limiting.
 2. Implementing Domain white listing.
 3. Implementing api caching using redis.
-4. Having proper protected and non-protected as per functionality describe in above api structure.
+4. Having properly protected and non-protected as per functionality described in above api structure.
 
 ### Important Notes:
 
-1. Application should be build using the above stack.
+1. Application should be built using the above stack.
 2. For registration, use JWT or a session-based mechanism
 3. Proper error handling is required.
 4. Write neat, suitable, bug-free, and readable code as per the coding standards.
-5. Create a data model as given in data structure section.
-6. Data model should be normalized and query must be acid complaint.
-7. Use Websocket to create connection where you think is required.
+5. Create a data model as given in the data structure section.
+6. Data model should be normalized and the query must be an acid complaint.
+7. Use Websocket to create a connection where you think is required.
 8. Have a swagger ui to document this api.
 
 **Note:** The timeline to complete this app is a maximum of three days. Plagiarism is
