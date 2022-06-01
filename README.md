@@ -34,7 +34,7 @@ createdAt: ( date, auto-added )
 updatedAt: ( date, auto-added and updated )
 ```
 
-**Note:** This is a reference structure. You can improvise it as per your requirement.
+  **Note:** This is a reference structure. You can improvise it as per your requirement.
 
 ### APIs
 
@@ -58,7 +58,7 @@ updatedAt: ( date, auto-added and updated )
      refreshToken: string
     }
 ```
-**Note:** Send a `confirmationToken` via mail to the end user.
+  **Note:** Send a `confirmationToken` via mail to the end user.
 
 2. Confirmation api:
 ```
