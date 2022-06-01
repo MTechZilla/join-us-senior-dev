@@ -36,7 +36,7 @@ Create a chat api that will have public rooms.
     Body: {
       token: ( string, required )
     }
- Response:
+  Response:
     statusCode: 200,
     data: {
      message: "Account confirm success"
@@ -52,7 +52,7 @@ Create a chat api that will have public rooms.
       email: ( string, required ),
       password: ( string, required ),
     }
- Response:
+  Response:
     statusCode: 200,
     data: {
      accessToken: string,
@@ -74,7 +74,7 @@ Create a chat api that will have public rooms.
 ```
 
 5. Get all rooms api:
-```
+  ```
   Request:
     URL: /rooms
     Method: GET
@@ -145,9 +145,10 @@ To develop the application, use the below-given stack:
 2. For registration, use JWT or a session-based mechanism
 3. Proper error handling is required.
 4. Write neat, suitable, bug-free, and readable code as per the coding standards.
-5. Create a data model as you need
+5. Create a data model as you need.
 6. Data model should be normalized and query must be acid complaint.
 7. Use Websocket to create connection where you think is required.
+8. Have a swagger ui to document this api.
 
 **The timeline to complete this app is a maximum of three days. Plagiarism is
 prohibited and if an applicant submits a plagiarised work then his application
