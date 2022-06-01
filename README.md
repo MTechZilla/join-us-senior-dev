@@ -6,6 +6,38 @@ This assignment is designed for the job post of the **Senior Software Developer*
 
 Create a chat api that will have public rooms.
 
+### Database structure
+
+1. User
+```
+id: ( guid, unqiue )
+firstName: ( string, required )
+lastName: ( string, required )
+email: ( string, required, unique )
+phoneNumber: ( number, required )
+profilePic: ( string, required )
+password: ( string, required )
+roomsOwned: Room[]
+roomsJoined: Room[]
+createdAt: ( date, auto-added )
+updatedAt: ( date, auto-added and updated )
+```
+
+2. Room
+```
+id: ( guid, unqiue )
+name: ( string, required )
+description: ( string, required )
+ownerId: User
+users: User[]
+createdAt: ( date, auto-added )
+updatedAt: ( date, auto-added and updated )
+```
+
+**Note:** This is reference structure and feel free to improvise it more.
+
+### APIs
+
 1. Signup API:
 ```
   Request:
@@ -28,7 +60,7 @@ Create a chat api that will have public rooms.
 ```
 **Note:** Send a `confirmationToken` via mail to the end user.
 
-2: Confirmation api:
+2. Confirmation api:
 ```
   Request:
     URL: /confirm
@@ -43,7 +75,7 @@ Create a chat api that will have public rooms.
     }
 ```
 
-3: SignIn api:
+3. SignIn api:
 ```
   Request:
     URL: /sign-in
@@ -60,7 +92,7 @@ Create a chat api that will have public rooms.
     }
 ```
 
-4: Logout api:
+4. Logout api:
 ```
   Request:
     URL: /logout
@@ -106,9 +138,9 @@ Create a chat api that will have public rooms.
     URL: /rooms
     Method: POST
     Body: {
-      name: string,
-      description: string,
-      ownerId: string
+      name: ( string, required ),
+      description: ( string, required ),
+      ownerId: ( string, required )
     }
   Response:
     statusCode: 200,
@@ -121,7 +153,7 @@ Create a chat api that will have public rooms.
     URL: /rooms/:id
     Method: PUT
     Body: {
-      userId: string
+      userId: ( string, required )
     }
   Response:
     statusCode: 200,
@@ -139,17 +171,23 @@ To develop the application, use the below-given stack:
 * Database: Any SQL Database.
 * CloudService: AWS/Azure/Gcp.
 
+### Bonus Points:
+1. Implementing API Rate limiting.
+2. Implementing Domain white listing.
+3. Implementing api caching using redis.
+4. Having proper protected and non-protected as per functionality describe in above api structure.
+
 ### Important Notes:
 
 1. Application should be build using the above stack.
 2. For registration, use JWT or a session-based mechanism
 3. Proper error handling is required.
 4. Write neat, suitable, bug-free, and readable code as per the coding standards.
-5. Create a data model as you need.
+5. Create a data model as given in data structure section.
 6. Data model should be normalized and query must be acid complaint.
 7. Use Websocket to create connection where you think is required.
 8. Have a swagger ui to document this api.
 
-**The timeline to complete this app is a maximum of three days. Plagiarism is
+**Note:** The timeline to complete this app is a maximum of three days. Plagiarism is
 prohibited and if an applicant submits a plagiarised work then his application
-will be rejected.**
+will be rejected.
