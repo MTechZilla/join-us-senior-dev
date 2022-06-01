@@ -74,7 +74,7 @@ Create a chat api that will have public rooms.
 ```
 
 5. Get all rooms api:
-  ```
+```
   Request:
     URL: /rooms
     Method: GET
