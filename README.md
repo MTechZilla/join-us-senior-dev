@@ -147,7 +147,7 @@ updatedAt: ( date, auto-added and updated )
     message: "Room created success"
 ```
 
-7. Join single room api:
+8. Join single room api:
 ```
   Request:
     URL: /rooms/:id
@@ -160,8 +160,8 @@ updatedAt: ( date, auto-added and updated )
     message: "User joined successfully"
 ```
 
-8. Post message in room api ( Use websocket connection )
-9. Get messages in room api ( Use websocket connection )
+9. Post message in room api ( Use websocket connection )
+10. Get messages in room api ( Use websocket connection )
 
 
 ### Stack:
