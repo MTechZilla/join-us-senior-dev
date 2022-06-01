@@ -38,7 +38,7 @@ updatedAt: ( date, auto-added and updated )
 
 ### APIs
 
-1. Signup API:
+1. Signup
 ```
   Request:
     URL: /sign-up
@@ -60,7 +60,7 @@ updatedAt: ( date, auto-added and updated )
 ```
   **Note:** Send a `confirmationToken` via mail to the end user.
 
-2. Confirmation api:
+2. Confirmation
 ```
   Request:
     URL: /confirm
@@ -75,7 +75,7 @@ updatedAt: ( date, auto-added and updated )
     }
 ```
 
-3. SignIn api:
+3. SignIn
 ```
   Request:
     URL: /sign-in
@@ -92,7 +92,7 @@ updatedAt: ( date, auto-added and updated )
     }
 ```
 
-4. Logout api:
+4. Logout
 ```
   Request:
     URL: /logout
@@ -105,7 +105,7 @@ updatedAt: ( date, auto-added and updated )
     }
 ```
 
-5. Get all rooms api:
+5. Get all rooms
 ```
   Request:
     URL: /rooms
@@ -117,7 +117,7 @@ updatedAt: ( date, auto-added and updated )
     }
 ```
 
-6. Get single room api:
+6. Get single room
 ```
   Request:
     URL: /rooms/:id
@@ -132,7 +132,7 @@ updatedAt: ( date, auto-added and updated )
     }
 ```
 
-7. Create single room api:
+7. Create single room
 ```
   Request:
     URL: /rooms
@@ -147,7 +147,7 @@ updatedAt: ( date, auto-added and updated )
     message: "Room created success"
 ```
 
-8. Join single room api:
+8. Join single room
 ```
   Request:
     URL: /rooms/:id
@@ -160,8 +160,8 @@ updatedAt: ( date, auto-added and updated )
     message: "User joined successfully"
 ```
 
-9. Post message in room api ( Use websocket connection )
-10. Get messages in room api ( Use websocket connection )
+9. Post message in room ( Use websocket connection )
+10. Get messages in room ( Use websocket connection )
 
 
 ### Stack:
