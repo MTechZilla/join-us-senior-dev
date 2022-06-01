@@ -188,6 +188,4 @@ Develop the application, use the below-given stack:
 7. Use Websocket to create a connection where you think is required.
 8. Have a swagger ui to document this api.
 
-**Note:** The timeline to complete this app is a maximum of three days. Plagiarism is
-prohibited and if an applicant submits a plagiarised work then his application
-will be rejected.
+**Note:** The timeline to complete this app is a maximum of three days.
