@@ -4,74 +4,151 @@ This assignment is designed for the job post of the **Senior Software Developer*
 
 ## Assignment Info
 
-Create a chat app that will have public rooms.
+Create a chat api that will have public rooms.
 
-Step 1: Create a sign up api and page ( `/signup` ) ( Signup user with following details )
+1. Signup API:
+```
+  Request:
+    URL: /sign-up
+    Method: POST
+    Body: {
+     firstName: ( string, required ),
+     lastName: ( string, required ),
+     email: ( string, required, unique ),
+     phoneNumber: ( number, required ),
+     profilePic: ( url, required ),
+     password: ( required, must have 8 characters with alpahnumeric and special characters )
+    }
+  Response:
+    statusCode: 201,
+    data: {
+     accessToken: string,
+     refreshToken: string
+    }
+```
+**Note:** Send a `confirmationToken` via mail to the end user.
 
-* First Name ( Required )
-* Last Name ( Required )
-* Email ( Required ) ( Unique ) ( Use AWS Cognito to register the user )
-* Phone number ( Required )
-* Profile pic ( Required ) ( Store this on AWS S3 bucket )
-* Password ( Required ) ( Must have 8 characters with alpahnumeric and special characters )
+2: Confirmation api:
+```
+  Request:
+    URL: /confirm
+    Method: PUT
+    Body: {
+      token: ( string, required )
+    }
+ Response:
+    statusCode: 200,
+    data: {
+     message: "Account confirm success"
+    }
+```
 
-After successfully signup redirect user to homepage ( `/signin` )
+3: SignIn api:
+```
+  Request:
+    URL: /sign-in
+    Method: POST
+    Body: {
+      email: ( string, required ),
+      password: ( string, required ),
+    }
+ Response:
+    statusCode: 200,
+    data: {
+     accessToken: string,
+     refreshToken: string
+    }
+```
 
-Step 2: Confirmation api and page ( `/confirmation?email=abc@mail.com` ) 
+4: Logout api:
+```
+  Request:
+    URL: /logout
+    Method: PUT
+  Response:
+    statusCode: 200,
+    data: {
+     accessToken: string,
+     refreshToken: string
+    }
+```
 
-Step 3: Create a sign in api and page ( `/signin` )
+5. Get all rooms api:
+```
+  Request:
+    URL: /rooms
+    Method: GET
+  Response:
+    statusCode: 200,
+    data: {
+      rooms: []
+    }
+```
 
-* On sign in api and page user should be able to login with email and password.
-* Show error if email and password doesnt match.
-* Show error for invalid email address.
-* If email is not confirmed, don't allow to signin.
-* Redirect user to homepage ( `/` ) after successfully login.
-* Show a forgot password link in login form where user can reset his password.
+6. Get single room api:
+```
+  Request:
+    URL: /rooms/:id
+    Method: GET
+  Response:
+    statusCode: 200,
+    data: {
+      id: string,
+      name: string,
+      description: string,
+      users: Array of users ( Use relationship )
+    }
+```
 
-Step 4: Show available chat rooms on home page and create api for that ( `/` ).
-Also show a button to create a public room.
+7. Create single room api:
+```
+  Request:
+    URL: /rooms
+    Method: POST
+    Body: {
+      name: string,
+      description: string,
+      ownerId: string
+    }
+  Response:
+    statusCode: 200,
+    message: "Room created success"
+```
 
-Step 5: Create public chat room api and page ( `/create-room` ) ( With Following details )
-* Name
-* Description
+7. Join single room api:
+```
+  Request:
+    URL: /rooms/:id
+    Method: PUT
+    Body: {
+      userId: string
+    }
+  Response:
+    statusCode: 200,
+    message: "User joined successfully"
+```
 
-Step 6: Join that room by click on room from home page ( `/room/{room_id}` ) 
+8. Post message in room api ( Use websocket connection )
+9. Get messages in room api ( Use websocket connection )
 
-Step 7: Send messages and all other people from that room will recieve the message ( `/room/{room_id}` )
-
-### Bonus Points:
-
--	Use Google / Facebook / Apple / Github OAuth to register and login user in the application.
--	Implementing the API Rate limiting.
--	Leave a room would be a great feature to build.
--	Pagination on API side would be a great feature to build.
--	Filtering based on Filled and Non Filled rooms would be a great feature to build.
 
 ### Stack:
 To develop the application, use the below-given stack:
 
-FrontEnd: 
-* HTML, CSS, JavaScript
-* React, Vue and Angular are optional.
-
-Backend:
 * Language & Framework: C# & Dot Net Core.
 * Database: Any SQL Database.
 * CloudService: AWS/Azure/Gcp.
 
 ### Important Notes:
 
-1. UI can be responsive but not a super important part.
-2. Application should be build using the above stack.
-3. For registration, use JWT or a session-based mechanism
-4. Proper error handling is required.
-5. Write neat, suitable, bug-free, and readable code as per the coding standards.
-6. Create a data model as you need
-7. Data model should be normalized and query must be acid complaint.
-8. Use Websocket to create connection between users.
+1. Application should be build using the above stack.
+2. For registration, use JWT or a session-based mechanism
+3. Proper error handling is required.
+4. Write neat, suitable, bug-free, and readable code as per the coding standards.
+5. Create a data model as you need
+6. Data model should be normalized and query must be acid complaint.
+7. Use Websocket to create connection where you think is required.
 
-**Note: The goal of the task is majorly based on backend development and thus UI won't be an important factor while evaluation.**
-
-**The timeline to complete this app is a maximum of five days. Plagiarism is
+**The timeline to complete this app is a maximum of three days. Plagiarism is
 prohibited and if an applicant submits a plagiarised work then his application
 will be rejected.**
