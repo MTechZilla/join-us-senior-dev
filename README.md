@@ -169,13 +169,13 @@ Develop the application, use the below-given stack:
 
 * Language & Framework: C# & Dot Net Core.
 * Database: Any SQL Database.
-* CloudService: AWS/Azure/Gcp.
 
 ### Bonus Points:
 1. Implementing API Rate limiting.
 2. Implementing Domain white listing.
 3. Implementing api caching using redis.
 4. Having properly protected and non-protected as per functionality described in above api structure.
+5. Have application hosted over aws/azure/gcp.
 
 ### Important Notes:
 
